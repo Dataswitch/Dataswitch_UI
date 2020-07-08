@@ -1,0 +1,34 @@
+/* login screen */
+.fullWidth {
+    width: 100%;
+}
+
+.testForm {
+    position: relative;
+}
+.testForm input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.testForm label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.testForm label span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.testForm input:focus + label span,
+.testForm input:valid + label span {
+    transform: translateY(-100%);
+    font-size: 14px;
+    color: #ccc;
+}
