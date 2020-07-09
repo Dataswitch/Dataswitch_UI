@@ -1,8 +1,45 @@
-/* login screen */
+/* common css */
 .fullWidth {
     width: 100%;
 }
+.vwh-100 {
+    height: calc(100vh - 56px); 
+    /* reduce height of the menubar */
+}
+.min-h-300 {
+    min-height: 300px;
+}
+.max-h-600 {
+    max-height: 600px;
+}
+.max-w-250 {
+    max-width: 250px;
+}
+.max-w-800 {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.CardP-0 .card-body {
+    padding: 0;
+}
+.CardP-0 .card {
+    border: none;
+}
+.items-box.border {
+    border: 1px solid grey;
+    padding: 50px;
+    border-radius: 4px;
+}
 
+/* index styles */
+
+/* signin styles */
+
+
+/* signup styles */
+
+
+/* test styles */
 .testForm {
     position: relative;
 }
