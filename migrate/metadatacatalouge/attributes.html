@@ -6,13 +6,12 @@
     <title>Data Switch</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <!-- main nav -->
         <nav class="navbar navbar-expand-sm bg-light">
             <!-- Brand/logo -->
             <a class="navbar-brand" href="/">
@@ -29,40 +28,39 @@
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Migrate</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="./metadatacatalouge.html">Data Catalog</a>
-                            <a class="dropdown-item" href="./schemamigrator.html">Schema Migrator</a>
+                            <a class="dropdown-item" href="../metadatacatalouge.html">Data Catalog</a>
+                            <a class="dropdown-item" href="../schemamigrator.html">Schema Migrator</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../integrate.html">Integrate</a>
+                        <a class="nav-link" href="../../integrate.html">Integrate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../democratize.html">Democratize</a>
+                        <a class="nav-link" href="../../democratize.html">Democratize</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../signin.html">LogOut</a>
+                        <a class="nav-link" href="../../signin.html">LogOut</a>
                     </li>
                 </ul>
             </div>
         </nav>
-
         <!-- links history label -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item"><a href="../migrate.html">Migrate</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data Catalogue</li>
+                <li class="breadcrumb-item"><a href="../metadatacatalouge.html">Data Catalogue</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Attributes</li>
             </ol>
         </nav>
     </header>
     <section class="pt-5">
         <div class="container">
             <!-- Below is the start of the main section -->
-
             <div class="items-box">
 
-                <div class="control_button d-flex">
-                    <div class="header-btns mr-8">
+                <div class="control_button">
+                    <div class="header-btns">
                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                             <div class="btn-group mr-2" role="group" aria-label="First group">
                                 <button type="button" class="btn btn-secondary">+</button>
@@ -75,25 +73,6 @@
                             </div>
                             <div class="btn-group" role="group" aria-label="Third group">
                                 <button type="button" class="btn btn-secondary">-</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-btns">
-                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                            <div class="btn-group mr-2" role="group" aria-label="Default group">
-                                <button type="button" class="btn btn-secondary nobtn" disabled>Import</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-secondary">DB</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                <button type="button" class="btn btn-secondary">DDL</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                <button type="button" class="btn btn-secondary">FlatFile</button>
-                            </div>
-                            <div class="btn-group" role="group" aria-label="Fourth group">
-                                <button type="button" class="btn btn-secondary">MetaData File</button>
                             </div>
                         </div>
                     </div>
@@ -174,15 +153,15 @@
                     </div>
                 </div>
 
+
                 <div class="emptyspace_20"></div>
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Catalog Name</th>
-                                <th scope="col">DB Type</th>
+                                <th scope="col">Physical Name</th>
+                                <th scope="col">Logical Name</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Details</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -190,17 +169,14 @@
                                 <th scope="row"><a href="#">HR</a></th>
                                 <td>Oracle</td>
                                 <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row"><a href="#">Sales</a></th>
                                 <td>MySQL</td>
                                 <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row"></th>
-                                <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -208,17 +184,6 @@
                     </table>
                 </div>
             </div>
-
-            <!-- temporary links -->
-            <ul class="navbar-nav d-flex flex-row">
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="./metadatacatalouge/entity.html">Entity</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./metadatacatalouge/attributes.html">Attributes</a>
-                </li>
-            </ul>
-
         </div>
     </section>
 
