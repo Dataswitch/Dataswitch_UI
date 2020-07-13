@@ -1,5 +1,5 @@
 slide9
-is it on differnt page or same page
+is it on differnt page or same page as the parent
 
 
 slide15
@@ -9,3 +9,9 @@ tables input
 
 
 want as button or link ?
+
+
+
+Table after clcicking edit, checkbox should open
+
+design pattern
