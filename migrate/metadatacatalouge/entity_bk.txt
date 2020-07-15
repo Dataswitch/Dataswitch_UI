@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Switch</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
-<body class="pageid-02">
+<body class="pageid-02-a">
     <header>
-        <!-- main nav -->
         <nav class="navbar navbar-expand-sm p-0 bg-white">
+            <!-- Brand/logo -->
             <div class="container">
-                <!-- Brand/logo -->
                 <a class="navbar-brand" href="/">
                     <!-- DataSwitch -->
-                    <img src="../assets/images/Logo.png" alt="Logo">
+                    <img src="../../assets/images/Logo.png" alt="Logo">
                 </a>
                 <!-- Links -->
                 <div class="collapse navbar-collapse">
@@ -30,18 +30,18 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Migrate</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./metadatacatalouge.html">Data Catalog</a>
-                                <a class="dropdown-item" href="./schemamigrator.html">Schema Migrator</a>
+                                <a class="dropdown-item" href="../metadatacatalouge.html">Data Catalog</a>
+                                <a class="dropdown-item" href="../schemamigrator.html">Schema Migrator</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../integrate.html">Integrate</a>
+                            <a class="nav-link" href="../../integrate.html">Integrate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../democratize.html">Democratize</a>
+                            <a class="nav-link" href="../../democratize.html">Democratize</a>
                         </li>
-                        <li class="nav-item d-flex align-items-center lh-2">
-                            <a class="nav-link btn btn-green" href="../signin.html">LogOut</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../signin.html">LogOut</a>
                         </li>
                     </ul>
                 </div>
@@ -55,25 +55,22 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item"><a href="../migrate.html">Migrate</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Data Catalogue</li>
+                    <li class="breadcrumb-item"><a href="../metadatacatalouge.html">Data Catalogue</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Entity</li>
                 </ol>
             </nav>
         </div>
     </section>
-    <section class="pt-3 min-vh-100">
+    <section class="pt-3  min-vh-100">
         <div class="container">
             <!-- Below is the start of the main section -->
-
             <div class="items-box border">
 
                 <div class="control_button d-flex">
-                    <div class="header-btns mr-8">
+                    <div class="header-btns">
                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                             <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-light border" data-toggle="modal"
-                                    data-target="#addModal">
-                                    +
-                                </button>
+                                <button type="button" class="btn btn-light border">+</button>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Second group">
                                 <button type="button" class="btn border btn-info editBtn">
@@ -85,27 +82,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header-btns">
-                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                            <div class="btn-group mr-2" role="group" aria-label="Default group">
-                                <button type="button" class="btn btn-secondary nobtn" disabled>Import</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-light border">DB</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                <button type="button" class="btn btn-light border">DDL</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                <button type="button" class="btn btn-light border">FlatFile</button>
-                            </div>
-                            <div class="btn-group" role="group" aria-label="Fourth group">
-                                <button type="button" class="btn btn-light border">MetaData File</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <hr />
+
                 <!-- modal for edit -->
                 <div class="modal fade" id="hrModal" tabindex="-1" role="dialog" aria-labelledby="hrModalLabel"
                     aria-hidden="true">
@@ -255,194 +233,85 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="addModalLabel">Add Table</h5>
-                                <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="catalog-name" class="col-form-label requiredField">Catalog
-                                            Name</label>
-                                        <input type="text" class="form-control" id="catalog-name" placeholder="Oracle"
-                                            required>
-                                        <div class="invalid-feedback">Sales name has to be unique</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cntType" class="requiredField">Connection Type</label>
-                                        <select class="form-control" id="cntType" required>
-                                            <option value="oracle">Oracle</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
-                                            <option value="option4">Option 4</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="catalogDesc" class="requiredField">Sales Description</label>
-                                        <textarea class="form-control" id="catalogDesc" rows="2"
-                                            placeholder="Oracle"></textarea>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cntName" class="requiredField">Connection Name</label>
-                                            <input type="text" class="form-control" id="cntName" placeholder="conn1"
-                                                required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cntPort" class="requiredField">Port</label>
-                                            <input type="text" class="form-control" id="cntPort" placeholder="6544"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="userName" class="requiredField">Username</label>
-                                            <input type="text" class="form-control" id="userName" placeholder="Ramya"
-                                                required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="hostName" class="requiredField">Host name</label>
-                                            <input type="text" class="form-control" id="hostName" placeholder="0.0.0.0"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="dbschemaName" class="requiredField">DB Schema Name</label>
-                                            <input type="text" class="form-control" id="dbschemaName" placeholder="abc"
-                                                required>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary closeBtn"
-                                    data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary-green">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-
+                <div class="emptyspace_20"></div>
                 <div class="table-responsive">
-                    <table id="dataTable" class="table table-striped table-bordered table-green table-sm">
+                    <table id="example" class="display table table-bordered table-striped table-green">
                         <thead>
                             <tr>
-                                <th scope="col">DB Type</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Details</th>
-                                <th scope="col">Remarks</th>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Extn</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th class="hasCheckbox">
-                                    <input type="checkbox" name="hrModal" id="hrModal" data-toggle="modal"
-                                        data-target="#hrModal">
-                                    <span>HR</span>
-                                </th>
-                                <td>Oracle</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="hasCheckbox">
-                                    <input type="checkbox" name="salesModal" id="salesModal" data-toggle="modal"
-                                        data-target="#salesModal">
-                                    <span>Sales</span>
-                                </th>
-                                <td>MySQL</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="hasCheckbox">
-                                    <input type="checkbox" name="salesModal" id="salesModal" data-toggle="modal"
-                                        data-target="#salesModal">
-                                    <span>Sales</span>
-                                </th>
-                                <td>MySQL</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
                     </table>
                 </div>
             </div>
-
-            <div class="pt-3">
-                <!-- temporary links -->
-                <ul class="navbar-nav d-flex flex-row">
-                    <li class="nav-item mr-3">
-                        <a class="nav-link" href="./metadatacatalouge/entity.html">Entity</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./metadatacatalouge/attributes.html">Attributes</a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
     </section>
 
-    <!-- boostrap scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <!-- scripts -->
+    <script src="../../assets/lib/datatable/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-
-    <!-- datatables scripts -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap4.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.bootstrap4.min.css" />
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
-    
-    <!-- custom script -->
+        
+    <script src="../../assets/lib/datatable/datatables.min.js"></script>
+    <script src="../../assets/lib/datatable/dataTables.checkboxes.min.js"></script>
+    <link rel="stylesheet" href="../../assets/lib/datatable/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="../../assets/lib/datatable/datatables.min.css"> -->
+    <link rel="stylesheet" href="../../assets/lib/datatable/dataTables.checkboxes.css">
+    <link rel="stylesheet" href="../../assets/lib/datatable/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         jQuery(function ($) {
             $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    'ajax': 'https://gyrocode.github.io/files/jquery-datatables/arrays_id.json',
+                    'columnDefs': [
+                        {
+                            'targets': 0,
+                            'render': function (data, type, row, meta) {
+                                if (type === 'display') {
+                                    data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
+                                }
 
-                var myTable = $('#dataTable').DataTable({
-                    responsive: true,
-                    fixedHeader: true,
-                    select: true
+                                return data;
+                            },
+                            'checkboxes': {
+                                'selectRow': true,
+                                'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
+                            }
+                        }
+                    ],
+                    'select': 'multi',
+                    'order': [[1, 'asc']]
                 });
 
-                // add class checkbox option 1
-                // $('.editBtn').on('click', () => {
-                //     $('table').addClass('showCheckBox');
-                // })
-                // // remove class checkbox
-                // $('.closeBtn').on('click', () => {
-                //     $('table').removeClass('showCheckBox');
-                //     $('.hasCheckbox input').prop('checked', false)
-                // })
+                // Handle form submission event
+                // $('#frm-example').on('submit', function (e) {
+                //     var form = this;
 
-                // add class checkbox option 2
-                $('.editBtn').on('click', () => {
-                    $('.editBtn').toggleClass('active');
-                    $('table').toggleClass('showCheckBox');
-                })
-                // remove class checkbox
-                $('.closeBtn').on('click', () => {
-                    $('.hasCheckbox input').prop('checked', false)
-                })
+                //     var rows_selected = table.column(0).checkboxes.selected();
 
+                //     // Iterate over all selected checkboxes
+                //     $.each(rows_selected, function (index, rowId) {
+                //         // Create a hidden element
+                //         $(form).append(
+                //             $('<input>')
+                //                 .attr('type', 'hidden')
+                //                 .attr('name', 'id[]')
+                //                 .val(rowId)
+                //         );
+                //     });
+                // });
             });
         });
 

@@ -1,0 +1,58 @@
+
+/* data table */
+table.dataTable,
+table.dataTable.no-footer,
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tbody th,
+table.dataTable tbody td {
+  border: none;
+}
+
+.table-responsive > .table-bordered.dataTable {
+  border: 0;
+}
+
+.dataTable.table-bordered {
+  border-bottom: 1px solid #dee2e6;
+}
+.dataTable.table-bordered td,
+.dataTable.table-bordered th {
+  border: 0.5px solid #dee2e6;
+}
+
+table.dataTable thead th:first-child {
+  width: 20px;
+}
+table.dataTable tbody tr td:first-child {
+  text-align: center;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border: 1px solid #dee2e6;
+}
+
+.dataTables_wrapper
+  #dataTable_paginate.dataTables_paginate
+  .paginate_button.current {
+  color: #fff !important;
+  background: #4cbd89;
+  border: 1px solid #4cbd89;
+}
+.dataTables_wrapper
+  #dataTable_paginate.dataTables_paginate
+  .paginate_button.current:hover {
+  color: #4cbd89 !important;
+  background: #fff;
+  border: 1px solid #4cbd89;
+}
+
+#dataTable {
+  margin-bottom: 25px;
+  padding-top: 10px;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 4px 8px 2px 8px;
+}
