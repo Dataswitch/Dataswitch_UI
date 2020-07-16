@@ -1,164 +1,161 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Switch</title>
+
+    <!-- datatable css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../../assets/css/common.css" />
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+
 </head>
 
-<body class="pageid-03-a">
+<body class="pageid-03-b">
     <header>
-        <nav class="navbar navbar-expand-sm p-0 bg-light">
+        <nav class="navbar navbar-expand-sm p-0 bg-white">
             <!-- Brand/logo -->
-            <a class="navbar-brand" href="/">
-                DataSwitch
-                <!-- <img src="logo.jpg" alt="Logo" style="width:40px;"> -->
-            </a>
-            <!-- Links -->
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">Migrate</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="../metadatacatalouge.html">Data Catalog</a>
-                            <a class="dropdown-item" href="../schemamigrator.html">Schema Migrator</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../integrate.html">Integrate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../democratize.html">Democratize</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../signin.html">LogOut</a>
-                    </li>
-                </ul>
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img class="mw-120" src="../../assets/images/Logo 2a.png" alt="Logo">
+                </a>
+                <!-- Links -->
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Migrate</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../metadatacatalouge.html">Data Catalog</a>
+                                <a class="dropdown-item" href="../schemamigrator.html">Schema Migrator</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../integrate.html">Integrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../democratize.html">Democratize</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center lh-2">
+                            <a class="nav-link btn btn-green" href="../../signin.html">LogOut</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
-        <!-- links history label -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="../../migrate.html">Migrate</a></li>
-                <li class="breadcrumb-item"><a href="../../migrate/schemamigrator.html">Schema Migrator</a></li>
-                <li class="breadcrumb-item"><a href="./schemapredictor.html">Schema Predictor</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Schema Designer</li>
-            </ol>
-        </nav>
-
     </header>
+    <section>
+        <div class="container">
+            <!-- links history label -->
+            <nav aria-label="breadcrumb" class="pt-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../../migrate.html">Migrate</a></li>
+                    <li class="breadcrumb-item"><a href="../../migrate/schemamigrator.html">Schema Migrator</a></li>
+                    <li class="breadcrumb-item"><a href="./schemapredictor.html">Schema Predictor</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Schema Designer</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-    <section class="pt-5">
+    <section class="pt-3 pb-5">
         <div class="container">
             <!-- Below is the start of the main section -->
-            <div class="items-box">
+            <!-- controllers -->
+            <div class="control_button d-flex mb-3">
+                <div class="col-2"></div>
+                <div class="header-btns col-6">
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-light border">Graph 1</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-light border">Graph 2</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="Third group">
+                            <button type="button" class="btn btn-light border">Graph 3</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Fourth group">
+                            <button type="button" class="btn btn-light border">Graph 4</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-btns col-4">
+                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="cancel">
+                            <button type="button" class="btn btn-green-dark">Cancel</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="save">
+                            <button type="button" class="btn btn-green">Save</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="submit">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-box border">
                 <!-- headers -->
                 <!-- <div class="row mb-2">
                     <div class="col-2"><b>Source Catalog</b></div>
                     <div class="col-8"></div>
                     <div class="col-2"><b>Target Catalog</b></div>
                 </div> -->
-
-                <!-- controllers -->
-                <div class="control_button d-flex mb-3">
-                    <div class="col-2"></div>
-                    <div class="header-btns col-6">
-                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                            <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-secondary">Graph 1</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                <button type="button" class="btn btn-secondary">Graph 2</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="Third group">
-                                <button type="button" class="btn btn-secondary">Graph 3</button>
-                            </div>
-                            <div class="btn-group" role="group" aria-label="Fourth group">
-                                <button type="button" class="btn btn-secondary">Graph 4</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-btns col-4">
-                        <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
-                            <div class="btn-group mr-2" role="group" aria-label="cancel">
-                                <button type="button" class="btn btn-warning">Cancel</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="save">
-                                <button type="button" class="btn btn-primary-green">Save</button>
-                            </div>
-                            <div class="btn-group mr-2" role="group" aria-label="submit">
-                                <button type="button" class="btn btn-success">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- items -->
                 <div class="row">
-                    <div class="col-2 sideNavListCotainer">
+                    <div class="col-2 p-3 sideNavListCotainer left">
                         <!-- side nav lists -->
-                        <p class="mb-2"><b>Target Catalog</b></p>
-                        <div>
-                            <a data-toggle="collapse" href="#SalesOrder" role="button" aria-expanded="false"
-                                aria-controls="SalesOrder">
-                                SalesOrder
-                            </a>
+                        <p class="mb-2 text-center"><b>Target Catalog</b></p>
+                        <div class="sideNavOptions left">
+                            <div>
+                                <a data-toggle="collapse" href="#SalesOrder" role="button" aria-expanded="false"
+                                    aria-controls="SalesOrder" class="font-weight-bold">
+                                    SalesOrder
+                                </a>
+                            </div>
+                            <div class="collapse" id="SalesOrder">
+                                <ul class="sideNavList">
+                                    <li class="btn-sidenav">
+                                        <span>Option 1</span>
+                                    </li>
+                                    <li class="btn-sidenav">
+                                        <span>Option 2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a data-toggle="collapse" href="#OrderDetails" role="button" aria-expanded="false"
+                                    aria-controls="OrderDetails" class="font-weight-bold">
+                                    OrderDetails
+                                </a>
+                            </div>
+                            <div class="collapse" id="OrderDetails">
+                                <ul class="sideNavList">
+                                    <li class="btn-sidenav">
+                                        <span>Option 1</span>
+                                    </li>
+                                    <li class="btn-sidenav">
+                                        <span>Option 2</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="collapse" id="SalesOrder">
-                            <ul class="sideNavList">
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Option 1</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Option 2</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <a data-toggle="collapse" href="#OrderDetails" role="button" aria-expanded="false"
-                                aria-controls="OrderDetails">
-                                OrderDetails
-                            </a>
-                        </div>
-                        <div class="collapse" id="OrderDetails">
-                            <ul class="sideNavList">
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">OrderID</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">ProductID</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">QTY</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Price</button>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
-                    <div class="col-10">
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut perferendis vel. Veniam
-                                illo adipisci vitae cumque dignissimos tenetur eos mollitia molestiae ipsa error soluta,
-                                perferendis, maiores qui in facere?</p>
-                        </div>
+                    <div class="col-10 p-3 min-h-300">
                     </div>
 
                 </div>
@@ -166,16 +163,36 @@
         </div>
     </section>
 
+
     <!-- scripts -->
-    <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="../../assets/lib/datatable/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="../../assets/lib/datatable/dataTables.checkboxes.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+
+                $('#example').DataTable({
+                    fixedHeader: false,
+                    deferRender: true,
+                    scroller: true,
+                    responsive: true,
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>

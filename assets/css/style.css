@@ -17,6 +17,9 @@
 header {
   box-shadow: 1px 1px 10px #000;
 }
+header .navbar.bg-white {
+  box-shadow: 0 2px 4px rgba(42, 185, 165, 0.2);
+}
 header .navbar li a {
   padding-top: 0;
   padding-bottom: 0;
@@ -240,20 +243,37 @@ section {
 .control_button .btn-light:hover {
   background-color: rgba(76, 189, 137, 0.3);
 }
+header .navbar li.lh-2 a {
+  line-height: 2;
+}
+
 .btn.btn-green {
   background: linear-gradient(150deg, #2ab9a5 0%, #97c74e 50%, #2ab9a5 100%);
+}
+.btn.btn-green-light {
+  background: linear-gradient(150deg, #f8f9fa 0%, #97c74e 50%, #f8f9fa 100%);
+  color: #252525;
+}
+.btn.btn-green-dark {
+  background: linear-gradient(150deg, #8f9397 0%, #2ab9a5 50%, #8f9397 100%);
+}
+
+.btn.btn-green,
+.btn.btn-green-light,
+.btn.btn-green-dark {
   transition: all 0.3s ease-in-out;
   border: 0;
   background-position: right bottom;
   background-size: 260% 100%;
   color: #fff;
 }
-header .navbar li.lh-2 a {
-  line-height: 2;
-}
-.btn.btn-green:hover {
+
+.btn.btn-green:hover,
+.btn.btn-green-light:hover,
+.btn.btn-green-dark:hover {
   background-position: left bottom;
 }
+
 .navbar-expand-sm .navbar-nav .nav-link {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
@@ -448,13 +468,14 @@ table.dataTable thead > tr > th {
   max-width: 50px;
   max-height: 30px;
   pointer-events: none;
+  opacity: 0.25;
 }
 .sideNavListCotainer.right p::before {
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 2px 2px 0px #4cbd89;
   right: 2px;
 }
 .sideNavListCotainer.left p::before {
-  box-shadow: -2px 2px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: -2px 2px 0px #4cbd89;
   left: 2px;
 }
 /* index styles */
