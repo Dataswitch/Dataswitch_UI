@@ -348,6 +348,25 @@ header .navbar li.lh-2 a {
   color: #252525;
 }
 
+.page-link {
+  color: #252525;
+  transition: all 0.4s ease;
+}
+.page-item.previous .page-link,
+.page-item.next .page-link {
+  background-color: rgba(76, 189, 137, 0.25);
+  color: #252525;
+}
+.page-item.active .page-link {
+  background-color: #4cbd89;
+  border-color: #4cbd89;
+}
+.page-item.previous.disabled .page-link,
+.page-item.next.disabled .page-link {
+  background-color: rgba(76, 189, 137, 0.15);
+  opacity: 0.5;
+}
+
 /* index styles */
 
 /* signin styles */
