@@ -61,14 +61,14 @@
             <nav aria-label="breadcrumb" class="pt-3">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="../migrate.html">Migrate</a></li>
+                    <li class="breadcrumb-item"><a href="../../migrate/metadatacatalouge.html">Migrate</a></li>
                     <li class="breadcrumb-item"><a href="../metadatacatalouge.html">Data Catalogue</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Entity</li>
                 </ol>
             </nav>
         </div>
     </section>
-    <section class="pt-3  min-vh-100">
+    <section class="pt-3 pb-5 min-vh-100">
         <div class="container">
             <!-- Below is the start of the main section -->
             <div class="items-box border">
@@ -80,7 +80,8 @@
                                 <button type="button" class="btn btn-light border addBtn">+</button>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                <button type="button" class="btn border btn-info editBtn" disabled>
+                                <button type="button" class="btn border btn-info editBtn" disabled data-toggle="modal"
+                                    data-target="#editModal">
                                     Edit
                                 </button>
                             </div>
@@ -92,150 +93,37 @@
                 </div>
 
                 <!-- modal for edit -->
-                <div class="modal fade" id="hrModal" tabindex="-1" role="dialog" aria-labelledby="hrModalLabel"
+
+                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="hrModalLabel">Edit Catalog</h5>
+                                <h5 class="modal-title" id="editModalLabel">Edit Row</h5>
                                 <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="catalog-name" class="col-form-label requiredField">Catalog
-                                            Name</label>
-                                        <input type="text" class="form-control" id="catalog-name" placeholder="Oracle"
-                                            required>
-                                        <div class="invalid-feedback">Catalog name has to be unique</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cntType" class="requiredField">Connection Type</label>
-                                        <select class="form-control" id="cntType" required>
-                                            <option value="oracle">Oracle</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
-                                            <option value="option4">Option 4</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="catalogDesc" class="requiredField">Catalog Description</label>
-                                        <textarea class="form-control" id="catalogDesc" rows="2"
-                                            placeholder="Oracle"></textarea>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cntName" class="requiredField">Connection Name</label>
-                                            <input type="text" class="form-control" id="cntName" placeholder="conn1"
-                                                required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cntPort" class="requiredField">Port</label>
-                                            <input type="text" class="form-control" id="cntPort" placeholder="6544"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="userName" class="requiredField">Username</label>
-                                            <input type="text" class="form-control" id="userName" placeholder="Ramya"
-                                                required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="hostName" class="requiredField">Host name</label>
-                                            <input type="text" class="form-control" id="hostName" placeholder="0.0.0.0"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="dbschemaName" class="requiredField">DB Schema Name</label>
-                                            <input type="text" class="form-control" id="dbschemaName" placeholder="abc"
-                                                required>
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="row table-data">
+                                </div>
+
+
+                                <div class="table-responsive">
+                                    <table class="editModalTable table table-striped table-green">
+                                        <thead>
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary closeBtn"
                                     data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary-green">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="salesModal" tabindex="-1" role="dialog" aria-labelledby="salesModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="salesModalLabel">Edit Sales</h5>
-                                <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="catalog-name" class="col-form-label requiredField">Catalog
-                                            Name</label>
-                                        <input type="text" class="form-control" id="catalog-name" placeholder="Oracle"
-                                            required>
-                                        <div class="invalid-feedback">Sales name has to be unique</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cntType" class="requiredField">Connection Type</label>
-                                        <select class="form-control" id="cntType" required>
-                                            <option value="oracle">Oracle</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
-                                            <option value="option4">Option 4</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="catalogDesc" class="requiredField">Sales Description</label>
-                                        <textarea class="form-control" id="catalogDesc" rows="2"
-                                            placeholder="Oracle"></textarea>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cntName" class="requiredField">Connection Name</label>
-                                            <input type="text" class="form-control" id="cntName" placeholder="conn1"
-                                                required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cntPort" class="requiredField">Port</label>
-                                            <input type="text" class="form-control" id="cntPort" placeholder="6544"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="userName" class="requiredField">Username</label>
-                                            <input type="text" class="form-control" id="userName" placeholder="Ramya"
-                                                required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="hostName" class="requiredField">Host name</label>
-                                            <input type="text" class="form-control" id="hostName" placeholder="0.0.0.0"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="dbschemaName" class="requiredField">DB Schema Name</label>
-                                            <input type="text" class="form-control" id="dbschemaName" placeholder="abc"
-                                                required>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary closeBtn"
-                                    data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary-green">Save</button>
+                                <button type="button" class="btn btn-primary-green saveEditModal">Save</button>
                             </div>
                         </div>
                     </div>
@@ -300,8 +188,6 @@
     <script>
         jQuery(function ($) {
             $(document).ready(function () {
-
-
                 var table = $('#example').DataTable({
                     'ajax': 'https://gyrocode.github.io/files/jquery-datatables/arrays_id.json',
                     fixedHeader: true,
@@ -355,18 +241,63 @@
 
 
                 $('.editBtn').click(function () {
-                    console.log('edit')
+                    console.log('edit');
+
+                    // clear existing data
+                    $('.editModalTable  thead tr th').remove()
+                    $('.editModalTable  tbody tr td').remove()
+
+                    let tds = $('#example tbody tr.selected').find("td").not(':first');
+                    let ths = $('#example thead th').not(':first').find(" div");
+
+                    console.log(tds)
+
+                    // editModal
+
+                    $.each(ths, function (i, el) {
+                        console.log(el.innerHTML);
+                        $('#editModal').find('.editModalTable thead tr').append("<th>" + el.innerHTML + "</th>")
+                        // $('#editModal').find('.table-data').append("<div class='col'>" + el.innerHTML + "</div>")
+                    });
+
+                    $.each(tds, function (i, el) {
+                        console.log(el.innerHTML);
+                        // $('#editModal').find('.editModalTable tbody tr').append("<td>"+el.innerHTML+ "</td>")
+                        $('#editModal').find('.editModalTable tbody tr').append(`<td><input type='text' value='${el.innerHTML}'/></td>`)
+                        // $(this).html("").append("<input type='text' value=\"" + txt + "\">");
+                    });
+
+                    $('#editModal').modal('handleUpdate')
+
                 });
 
+                // save edit modal
+                $('.saveEditModal').click(function () {
+
+                    var tds = $('#example tbody tr.selected').find("td").not(':first');
+                    let iptds = $('.editModalTable tbody tr td input');
+
+                    $.each(tds, function (i, el) {
+                        let text = iptds[i].value;
+                        $(this).html(text)
+                    });
+
+                    // $.each(iptds, function (i, el) {
+                    //     let txt = el.value;
+                    //     tds[i].outerText = txt;
+                    // });
+                });
 
                 // general
                 $("#example").on('mousedown', "input", function (e) {
                     e.stopPropagation();
                 });
+
                 // add row
                 $('.addBtn').click(function () {
                     var rowHtml = $("#addRowTable").find("tbody tr")[0].outerHTML
                     table.row.add($(rowHtml)).draw();
+
                 });
 
 

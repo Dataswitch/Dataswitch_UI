@@ -6,6 +6,7 @@
     <title>Data Switch</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
@@ -62,7 +63,7 @@
             </nav>
         </div>
     </section>
-    <section class="pt-3 min-vh-100">
+    <section class="pt-3 pb-3 min-vh-100">
         <div class="container">
             <!-- Below is the start of the main section -->
             <div class="items-box border">
@@ -78,11 +79,13 @@
                         <div class="form-row align-items-center">
                             <label class="col-md-2">Upload DB Status</label>
                             <span class="col-md-2">
-                                <span class="btn btn-primary btn-file">Browse <input type="file"></span>
+                                <span class="btn btn-primary btn-file btn-green">Browse <input type="file"></span>
                             </span>
-                            <button type="button" class="btn btn-link col-md-3 text-left ml-4">Click to Download SQL
-                                Queries to Collect DB
-                                Statistics</button>
+                            <button type="button"
+                                class="btn btn-link color-green text-decoration-none font-weight-bold col-md-3 text-left ml-4">
+                                Click to Download SQL Queries to Collect DB Statistics
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                            </button>
                         </div>
                         <div class="d-flex">
                             <p class="col-md-2"></p>
@@ -93,7 +96,7 @@
             </div>
 
             <!-- temporary links -->
-            <ul class="navbar-nav d-flex flex-row">
+            <ul class="navbar-nav d-flex flex-row pt-3">
                 <li class="nav-item mr-3">
                     <a class="nav-link" href="./schemamigrator/schemapredictor.html">Schema Predictor</a>
                 </li>
