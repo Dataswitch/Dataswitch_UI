@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Switch</title>
+
+    <!-- datatable css -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,37 +17,7 @@
     <link rel="stylesheet" href="../../assets/css/common.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
 
-    <!-- draggable -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#draggable").draggable({ snap: true });
-            $("#draggable2").draggable({ snap: true, revert: "invalid" });
-            // $("#draggable2").draggable({ snap: ".ui-widget-header" });
-            // $("#draggable3").draggable({ snap: ".ui-widget-header", snapMode: "outer" });
-            // $("#draggable4").draggable({ grid: [20, 20] });
-            // $("#draggable5").draggable({ grid: [80, 80] });
-
-            $("#droppable tr td").droppable({
-                drop: function (event, ui) {
-                    $(this).addClass("ui-state-highlight");
-                    $(this).append($(ui.draggable).text());
-                }
-            });
-
-
-        });
-
-    </script>
-    <style>
-        .ui-draggable {
-            z-index: 9;
-        }
-    </style>
 </head>
 
 <body class="pageid-03-b">
@@ -111,66 +83,48 @@
                 </div> -->
                 <!-- items -->
                 <div class="row">
-                    <div class="col-2 sideNavListCotainer">
+                    <div class="col-2 p-3 sideNavListCotainer left">
                         <!-- side nav lists -->
-                        <p class="mb-2"><b>Source Catalog</b></p>
+                        <p class="mb-2 text-center"><b>Source Catalog</b></p>
+                        <div class="sideNavOptions left">
+                            <div>
+                                <a data-toggle="collapse" href="#SalesOrder" role="button" aria-expanded="false"
+                                    aria-controls="SalesOrder" class="font-weight-bold">
+                                    SalesOrder
+                                </a>
+                            </div>
+                            <div class="collapse" id="SalesOrder">
+                                <ul class="sideNavList">
+                                    <li class="btn-sidenav">
+                                        <span>Option 1</span>
+                                    </li>
+                                    <li class="btn-sidenav">
+                                        <span>Option 2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a data-toggle="collapse" href="#OrderDetails" role="button" aria-expanded="false"
+                                    aria-controls="OrderDetails" class="font-weight-bold">
+                                    OrderDetails
+                                </a>
+                            </div>
+                            <div class="collapse" id="OrderDetails">
+                                <ul class="sideNavList">
+                                    <li class="btn-sidenav">
+                                        <span>Option 1</span>
+                                    </li>
+                                    <li class="btn-sidenav">
+                                        <span>Option 2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <div id="draggable" class="ui-widget-content">
-                            <p class="m-0">Drag</p>
-                        </div>
-                        <div id="draggable2" class="ui-widget-content">
-                            <p class="m-0">Drop</p>
-                        </div>
-
-                        <div>
-                            <a data-toggle="collapse" href="#SalesOrder" role="button" aria-expanded="false"
-                                aria-controls="SalesOrder">
-                                SalesOrder
-                            </a>
-                        </div>
-                        <div class="collapse" id="SalesOrder">
-                            <ul class="sideNavList">
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Option 1</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Option 2</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <a data-toggle="collapse" href="#OrderDetails" role="button" aria-expanded="false"
-                                aria-controls="OrderDetails">
-                                OrderDetails
-                            </a>
-                        </div>
-                        <div class="collapse" id="OrderDetails">
-                            <ul class="sideNavList">
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">OrderID</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">ProductID</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">QTY</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Price</button>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 p-3">
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-green ui-widget-header"
-                                id="droppable">
+                            <table id="example" class="display table table-sm table-striped table-bordered table-green">
                                 <thead>
                                     <tr>
                                         <th scope="col">Source Table</th>
@@ -188,13 +142,15 @@
                                     </tr>
                                     <tr>
                                         <th scope="row"><a href="#">OrderDetails</a></th>
-                                        <td>MySQL</td>
                                         <td></td>
+                                        <td>MySQL</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Product</th>
-                                        <td></td>
+                                        <td>
+                                            <input type="checkbox" checked name="" id="">
+                                        </td>
                                         <td></td>
                                         <td></td>
                                     </tr>
@@ -202,53 +158,42 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-2 sideNavListCotainer">
+                    <div class="col-2 p-3 sideNavListCotainer right">
                         <!-- side nav lists -->
-                        <p class="mb-2"><b>Target Catalog</b></p>
-                        <div>
-                            <a data-toggle="collapse" href="#SalesOrder1" role="button" aria-expanded="false"
-                                aria-controls="SalesOrder1">
-                                SalesOrder
-                            </a>
-                        </div>
-                        <div class="collapse" id="SalesOrder1">
-                            <ul class="sideNavList">
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Option
-                                        1</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Option 2</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <a data-toggle="collapse" href="#OrderDetails1" role="button" aria-expanded="false"
-                                aria-controls="OrderDetails1">
-                                OrderDetails
-                            </a>
-                        </div>
-                        <div class="collapse" id="OrderDetails1">
-                            <ul class="sideNavList">
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">OrderID</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">ProductID</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">QTY</button>
-                                </li>
-                                <li>
-                                    <span>| -</span>
-                                    <button type="button" class="btn btn-link pl-0">Price</button>
-                                </li>
-                            </ul>
+                        <p class="mb-2 text-center"><b>Target Catalog</b></p>
+                        <div class="sideNavOptions right">
+                            <div>
+                                <a data-toggle="collapse" href="#SalesOrder1" role="button" aria-expanded="false"
+                                    aria-controls="SalesOrder1" class="font-weight-bold">
+                                    SalesOrder
+                                </a>
+                            </div>
+                            <div class="collapse" id="SalesOrder1">
+                                <ul class="sideNavList">
+                                    <li class="btn-sidenav">
+                                        <span>Option 1</span>
+                                    </li>
+                                    <li class="btn-sidenav">
+                                        <span>Option 2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a data-toggle="collapse" href="#OrderDetails1" role="button" aria-expanded="false"
+                                    aria-controls="OrderDetails1" class="font-weight-bold">
+                                    OrderDetails
+                                </a>
+                            </div>
+                            <div class="collapse" id="OrderDetails1">
+                                <ul class="sideNavList">
+                                    <li class="btn-sidenav">
+                                        <span>Option 1</span>
+                                    </li>
+                                    <li class="btn-sidenav">
+                                        <span>Option 2</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -258,6 +203,35 @@
     </section>
 
 
+    <!-- scripts -->
+    <script src="../../assets/lib/datatable/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="../../assets/lib/datatable/dataTables.checkboxes.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+
+                $('#example').DataTable({
+                    fixedHeader: false,
+                    deferRender: true,
+                    scroller: true,
+                    responsive: true,
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>

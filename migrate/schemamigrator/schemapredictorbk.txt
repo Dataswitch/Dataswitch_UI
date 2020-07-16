@@ -1,0 +1,263 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Switch</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <!-- draggable -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#draggable").draggable({ snap: true });
+            $("#draggable2").draggable({ snap: true, revert: "invalid" });
+            // $("#draggable2").draggable({ snap: ".ui-widget-header" });
+            // $("#draggable3").draggable({ snap: ".ui-widget-header", snapMode: "outer" });
+            // $("#draggable4").draggable({ grid: [20, 20] });
+            // $("#draggable5").draggable({ grid: [80, 80] });
+
+            $("#droppable tr td").droppable({
+                drop: function (event, ui) {
+                    $(this).addClass("ui-state-highlight");
+                    $(this).append($(ui.draggable).text());
+                }
+            });
+
+
+        });
+
+    </script>
+    <style>
+        .ui-draggable {
+            z-index: 9;
+        }
+    </style>
+</head>
+
+<body class="pageid-03-b">
+    <header>
+        <nav class="navbar navbar-expand-sm p-0 bg-white">
+            <!-- Brand/logo -->
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <!-- DataSwitch -->
+                    <img src="../../assets/images/Logo.png" alt="Logo">
+                </a>
+                <!-- Links -->
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Migrate</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../metadatacatalouge.html">Data Catalog</a>
+                                <a class="dropdown-item" href="../schemamigrator.html">Schema Migrator</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../integrate.html">Integrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../democratize.html">Democratize</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../signin.html">LogOut</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <!-- links history label -->
+            <nav aria-label="breadcrumb" class="pt-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../../migrate.html">Migrate</a></li>
+                    <li class="breadcrumb-item"><a href="../../migrate/schemamigrator.html">Schema Migrator</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Schema Predictor</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="pt-3 pb-5">
+        <div class="container">
+            <!-- Below is the start of the main section -->
+            <div class="items-box border">
+                <!-- headers -->
+                <!-- <div class="row mb-2">
+                    <div class="col-2"><b>Source Catalog</b></div>
+                    <div class="col-8"></div>
+                    <div class="col-2"><b>Target Catalog</b></div>
+                </div> -->
+                <!-- items -->
+                <div class="row">
+                    <div class="col-2 sideNavListCotainer">
+                        <!-- side nav lists -->
+                        <p class="mb-2"><b>Source Catalog</b></p>
+
+                        <div id="draggable" class="ui-widget-content">
+                            <p class="m-0">Drag</p>
+                        </div>
+                        <div id="draggable2" class="ui-widget-content">
+                            <p class="m-0">Drop</p>
+                        </div>
+
+                        <div>
+                            <a data-toggle="collapse" href="#SalesOrder" role="button" aria-expanded="false"
+                                aria-controls="SalesOrder">
+                                SalesOrder
+                            </a>
+                        </div>
+                        <div class="collapse" id="SalesOrder">
+                            <ul class="sideNavList">
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">Option 1</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">Option 2</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a data-toggle="collapse" href="#OrderDetails" role="button" aria-expanded="false"
+                                aria-controls="OrderDetails">
+                                OrderDetails
+                            </a>
+                        </div>
+                        <div class="collapse" id="OrderDetails">
+                            <ul class="sideNavList">
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">OrderID</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">ProductID</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">QTY</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">Price</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-green ui-widget-header"
+                                id="droppable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Source Table</th>
+                                        <th scope="col">Collection</th>
+                                        <th scope="col">Embed</th>
+                                        <th scope="col">Referencing</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><a href="#">SalesOrder</a></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Customer</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><a href="#">OrderDetails</a></th>
+                                        <td>MySQL</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Product</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-2 sideNavListCotainer">
+                        <!-- side nav lists -->
+                        <p class="mb-2"><b>Target Catalog</b></p>
+                        <div>
+                            <a data-toggle="collapse" href="#SalesOrder1" role="button" aria-expanded="false"
+                                aria-controls="SalesOrder1">
+                                SalesOrder
+                            </a>
+                        </div>
+                        <div class="collapse" id="SalesOrder1">
+                            <ul class="sideNavList">
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">Option
+                                        1</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">Option 2</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a data-toggle="collapse" href="#OrderDetails1" role="button" aria-expanded="false"
+                                aria-controls="OrderDetails1">
+                                OrderDetails
+                            </a>
+                        </div>
+                        <div class="collapse" id="OrderDetails1">
+                            <ul class="sideNavList">
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">OrderID</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">ProductID</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">QTY</button>
+                                </li>
+                                <li>
+                                    <span>| -</span>
+                                    <button type="button" class="btn btn-link pl-0">Price</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
