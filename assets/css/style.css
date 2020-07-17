@@ -483,8 +483,6 @@ table.dataTable thead > tr > th {
 
 /* signin styles */
 
-/* signup styles */
-
 /* test styles */
 
 /* page id 03 a schmea designer */
@@ -646,4 +644,68 @@ table.dataTable thead > tr > th {
   position: absolute;
   top: -75px;
   filter: brightness(0) invert(1);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* signup styles */
+
+.page-id-05 section {
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
+.page-id-05 .page_wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.page-id-05 .logo_container img {
+  max-width: 120px;
+  filter: brightness(0) invert(1);
+}
+.page-id-05 .logo_container .btn {
+  color: #fff;
+  border: 1px solid #fff;
+  margin-left: 10px;
+}
+
+.page-id-05 form {
+  margin: 0;
+  margin-right: -30px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(89, 105, 128, 0.1),
+    0 3px 20px 0 rgba(89, 105, 128, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.page-id-05 .p-40 {
+  padding: 40px;
+}
+
+.page-id-05 .signupcard h3 {
+  color: #8f9397;
+  line-height: 1.4;
+  font-size: 24px;
+}
+.page-id-05 .signupcard p {
+  color: #666666;
+  font-size: 14px;
+}
+.page-id-05 hr {
+  height: 1px;
+  border: 0;
+  background-color: rgba(228, 228, 231, 0);
+  background-image: linear-gradient(
+    to right,
+    rgba(228, 228, 231, 0),
+    rgba(228, 228, 231, 0.9) 10%,
+    rgba(228, 228, 231, 0.9) 90%,
+    rgba(228, 228, 231, 0)
+  );
+  margin: 50px auto 40px;
+}
+
+.page-id-05 .signupcard {
+  background: #f9f9fb;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 3px 20px 0 rgba(0, 0, 0, 0.15);
 }
