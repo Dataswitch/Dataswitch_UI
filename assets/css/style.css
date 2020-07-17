@@ -12,6 +12,7 @@
   object-fit: contain;
   max-width: 120px;
   max-height: 120px;
+  min-width: 100px;
   margin: 5px 0;
 }
 header {
@@ -493,4 +494,156 @@ table.dataTable thead > tr > th {
 
 .pageid-03-b .items-box {
   padding: 0 15px;
+}
+
+/* signin */
+
+/* Coded with love by Mutiullah Samim */
+.page-id-04 {
+  height: 100%;
+}
+.page-id-04 .title {
+  margin: 40px 20px 0;
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: 300;
+}
+.page-id-04 .user_card {
+  width: 430px;
+  margin-top: 75px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+.page-id-04 .brand_logo_container {
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  top: -75px;
+  border-radius: 50%;
+  background: #60a3bc;
+  padding: 10px;
+  text-align: center;
+}
+.page-id-04 .brand_logo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.page-id-04 .form_container {
+  padding: 40px;
+  width: 100%;
+}
+.page-id-04 form {
+  width: 100%;
+  margin: 0 auto;
+}
+.page-id-04 .btn-link {
+  text-decoration: underline;
+}
+.page-id-04 .btn-link:hover {
+  text-decoration: none;
+}
+.page-id-04 .login_btn {
+  width: 100%;
+  background: #4cbd89;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+.page-id-04 .login_btn:focus {
+  box-shadow: none;
+  outline: 0px;
+}
+.page-id-04 .login_container {
+  padding: 0;
+}
+.page-id-04 .form-group {
+  margin-bottom: 20px;
+}
+.page-id-04 .form-control {
+  border: 1px solid #4cbd89;
+  border-left: none !important;
+  font-size: 14px;
+  line-height: 1.42857;
+  padding: 20px 12px;
+  color: #3f3f44;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: inset 0 1px 2px rgba(203, 203, 210, 0.4);
+}
+.page-id-04 .input-group-text {
+  background: transparent;
+  color: #4cbd89;
+  border: 1px solid #4cbd89;
+  border-right: none;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+  position: relative;
+}
+.page-id-04 span.input-group-text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  opacity: 0.5;
+  background-color: rgba(212, 212, 212, 0);
+  background-image: linear-gradient(
+    to top,
+    rgba(212, 212, 212, 0) 0,
+    #4cbd89 30%,
+    #4cbd89 70%,
+    rgba(212, 212, 212, 0) 100%
+  );
+  z-index: 1;
+}
+.page-id-04 .input_user,
+.page-id-04 .input_pass:focus {
+  box-shadow: none;
+  outline: 0px;
+}
+.page-id-04 label,
+.page-id-04 .font12 {
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.page-id-04 .input_user,
+.page-id-04 .input_pass {
+  border-left: none;
+}
+.page-id-04
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #4cbd89;
+}
+
+.page-id-04 .floor-panel {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px;
+  display: block;
+}
+
+.page-id-04 .floor-panel div {
+  font-size: 17px;
+  color: #666666;
+}
+.page-id-04 .logoBox img {
+  max-width: 150px;
+  position: absolute;
+  top: -75px;
+  filter: brightness(0) invert(1);
 }
